@@ -82,6 +82,14 @@ func New(year int, month time.Month, day int) Date {
 	return Date{encode(t)}
 }
 
+func (d Date) getInternalRepresentation() int32 {
+	return d.day
+}
+
+func NewFromInt32(in int32) Date {
+	return Date{in}
+}
+
 // NewAt returns the Date value corresponding to the given time.
 // Note that the date is computed relative to the time zone specified by
 // the given Time value.
