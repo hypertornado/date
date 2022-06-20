@@ -82,7 +82,7 @@ func New(year int, month time.Month, day int) Date {
 	return Date{encode(t)}
 }
 
-func (d Date) getInternalRepresentation() int32 {
+func (d Date) GetInternalRepresentation() int32 {
 	return d.day
 }
 
